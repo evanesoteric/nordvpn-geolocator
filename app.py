@@ -13,7 +13,6 @@ from os import getenv
 from dotenv import load_dotenv
 load_dotenv()
 
-import pdb
 
 IPLOCATE_API_KEY = getenv("IPLOCATE_API_KEY")
 USER_AGENT = getenv("USER_AGENT")
