@@ -52,7 +52,11 @@ for i in vpns:
     vpn_name = re.sub(r'.tcp.ovpn$','', vpn_name)
 
     # get ip
-    vpn_ip = socket.gethostbyname(vpn_name)
+    vpn_ip = ''
+    try:
+        vpn_ip = socket.gethostbyname(vpn_name)
+    except Exception as exc:
+        pass
 
     # query api 
     params = (
@@ -60,14 +64,17 @@ for i in vpns:
         ('ip', vpn_ip),
         ('fields', 'city,state_prov')
     )
-    r = requests.get('https://api.ipgeolocation.io/ipgeo', params=params, timeout=10)
-    if r.status_code != 200:
-        city = str(r.status)
-        state = str(r.status)
-    else:
-        r = r.json()
-        city = r.get('city')
-        state = r.get('state_prov')
+    try:
+        r = requests.get('https://api.ipgeolocation.io/ipgeo', params=params, timeout=4)
+        if r.status_code != 200:
+            city = str(r.status)
+            state = str(r.status)
+        else:
+            r = r.json()
+            city = r.get('city')
+            state = r.get('state_prov')
+    except Exception as exc:
+        pass
 
     data = {
         "name": vpn_name,
