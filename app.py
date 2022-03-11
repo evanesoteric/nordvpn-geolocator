@@ -91,10 +91,13 @@ for i in vpns:
 session.close()
 
 # write to file
-with open('vpns.json', 'w', encoding='utf-8') as vpns_out:
-    json.dump(vpn_data, vpns_out, ensure_ascii=False, indent=2)
+with open('vpns.json', 'w', encoding='utf-8') as F:
+    json.dump(vpn_data, F, ensure_ascii=False, indent=2)
 
 # write date to file
 todays_date = date.today().isoformat()
-with open('last_updated.txt', 'w') as date_open:
-    date_open.write(todays_date)
+with open('last_updated.txt', 'w') as F:
+    F.write(todays_date)
+
+# Done
+print(str(len(vpn_data)))
