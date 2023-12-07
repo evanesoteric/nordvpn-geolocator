@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap');
+
+
+body {
+    font-color: #ffffff;
+    background-color: #191b22;
+}
+
+section {
+    margin: 40px 0;
+}
+table {
+    color: #f9f9f9;
+}
+thead,
+tfoot {
+    font-family: 'Fira Sans', sans-serif;
+    color: #f9f9f9;
+    font-size: 1.3em;
+    letter-spacing: 1.318px;
+}
+tbody {
+    color: #f9f9f9;
+    font-size: 1.1em;
+}
+
+.heading {
+    text-align: center;
+    color: #f9f9f9;
+    margin: 40px 0;
+}
+.heading-title {
+}
+
+.heading-body {
+    color: #f9f9f9;
+    font-size: 1.33em;
+}
+
+.heading-links {
+    color: #f9f9f9;
+    letter-spacing: 1.08px;
+}
+.heading-links a {
+    color: #f9f9f9;
+}
+.heading-links a:hover {
+    color: #ff8833;
+}
+
+.box-panel {
+    padding: 10px 20px;
+    border-radius: 4px;
+    background: #282c37;
+    box-shadow: 0 4px 6px rgba(0,0,0,.2);
+}
+
+.social-bar {
+    display: block;
+    line-height: 50px;
+}
+
+.gitlab-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width:36px;
+    height: 36px;
+}
+
+
+
+/* Larger than mobile screen */
+@media (min-width: 40.0rem) { }
+
+/* Larger than tablet screen */
+@media (min-width: 80.0rem) { }
+
+/* Larger than desktop screen */
+@media (min-width: 120.0rem) { }
+
+

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<section>
+  <div class="container">
+
+    <div class="row">
+      <div class="column">
+        <div class="box-panel">
+          <div class="social-bar">
+            <div class="clearfix">
+              <div class="float-left">
+                <span class="heading-links">Last updated: {{ last_updated }}</span>
+              </div>
+              <div class="float-right">
+                <span class="heading-links"><a href="{{ git_link }}"><img class="gitlab-icon" src = "{{ url_for('static', filename='img/gitlab.svg') }}" alt="gitlab evanesoteric"/>[NordVPN-Geolocator]</a></span>
+              </div>
+            </div>
+            <div class="heading">
+              <h1 class="heading-title">NordVPN Geolocator</h1>
+              <p class="heading-body">Geolocate NordVPN servers</p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- // row -->
+
+    </div> <!-- // container -->
+</section>
+
+<section>
+  <div class="container">
+
+    <div class="row">
+      <div class="column">
+        <div class="box-panel">
+          <table id="vpns">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>IP</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Type</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Rows appended here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div> <!-- // row -->
+
+  </div> <!-- // container -->
+</section>
+{% endblock %}
